@@ -10,5 +10,12 @@
  * @returns {String}
  */
 const firstNonRepeatedCharacter = function (string) {
-  // TODO: your solution here
+  var letters = string.split('')
+  for (var i = 0; i < string.length; i++) {
+    var one = letters[i]
+    if (one !== string[i]) {
+      return one
+    }
+  }
+  return null
 }
