@@ -19,3 +19,20 @@ const firstNonRepeatedCharacter = function (string) {
   }
   return null
 }
+///////////////////////////////////////CORRIGER !!!!!!!
+//nekhedh il length ... bad loop w hsart kol caracter ... bch nkaren ... ican nkaren b another loop or with indexOf or /// il faut 2 loops !!!! for
+// we gonna use indexoF and LastIndexOF(c'est deja fihom loop)...... last indexod tekef fil 0 .... w indexOf tekef fel lekhreniya WAHDA TALAA W WAHDA HABTAA
+// fi nafs il loop mtei
+//sinon felekhr return null .
+
+const firstNonRepeatedCharacter = function (string) {
+for(var i=0 ; i<string.length ; i++){
+  if(string.indexOf(string[i])=== string.lastIndexOf(string[i])){
+return string[i]
+  }
+}
+return null
+
+}
+
+

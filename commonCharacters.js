@@ -18,4 +18,21 @@
 
  * Should return null or empty string of there is no commonCharacters
 
- *
+ */////
+
+function commonCharacters(a, b) {
+    var result = ''
+    for (var i = 0; i < a.length; i++) {
+        var char = a.charAt(i)
+        // avec ca je vais prendre character in a  avec lindex i.. -1 bc if there isn't something in common it give -1 so it needs to be !== -1 so I only access the common character  
+        if (b.indexOf(char) !== -1) {
+            result = result + char
+        }
+    }
+    if (result) {
+        return result
+    } else {
+        return null
+    }
+
+}
