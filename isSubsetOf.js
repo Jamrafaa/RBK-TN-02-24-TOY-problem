@@ -17,8 +17,22 @@
  * subset.
 */
 Array.prototype.isSubsetOf = function (arr) {
-  // your code here
+  var found = false
+  for (var i = 0; i < this.length; i++) {
+    for (var j = 0; j < arr.length; j++) {
+      if (this[i] === arr[j]) {
+        found = true
+      }
+    }
+  }
+  if (!found){
+    return false
+  }
+  return true
+  
+}
 
-};
 
-/*
+var a = ['commit','push']
+console.log(a.isSubsetOf(['commit','rebase','push','blame']))
+

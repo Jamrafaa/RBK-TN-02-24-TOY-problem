@@ -36,3 +36,19 @@ function commonCharacters(a, b) {
     }
 
 }
+///////////////////////////avec 2 loops
+
+function commonCharacters(a, b) {
+    var res = ''
+    for (var i = 0; i < a.length; i++) {
+        for (var j = 0; i < b.length; j++) {
+            if (a[i] === a[j] && !res.includes(a[i]) && a[i] !== ' ') {
+                res = res + a[i]
+            }
+        }
+    }
+
+return res || null
+
+
+}
